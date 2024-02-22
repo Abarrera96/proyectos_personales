@@ -1,0 +1,153 @@
+
+[NEAT]
+fitness_criterion = max
+- Criterio utilizado para determinar la aptitud. 'max' significa que el algoritmo busca maximizar la función de aptitud.
+
+fitness_threshold = 100000
+- El valor de aptitud en el que la simulación se detendrá si algún genoma alcanza esta puntuación.
+
+pop_size = 300
+- El número de individuos (genomas) en cada generación.
+
+reset_on_extinction = False
+- Si se debe reiniciar toda la población si todas las especies se extinguen.
+
+[DefaultGenome]
+activation_default = tanh
+- Función de activación predeterminada para los nodos.
+
+activation_mutate_rate = 0.2
+- La tasa a la que la función de activación puede mutar en los nodos.
+
+activation_options = tanh sigmoid relu
+- El conjunto de posibles funciones de activación que un nodo puede usar.
+
+aggregation_default = sum
+- Método predeterminado para agregar señales entrantes.
+
+aggregation_mutate_rate = 0.2
+- La tasa a la que el método de agregación puede mutar en los nodos.
+
+aggregation_options = sum
+- El conjunto de posibles métodos de agregación que un nodo puede usar.
+
+feed_forward = True
+- Si la red es hacia adelante (True) o recurrente (False).
+
+compatibility_disjoint_coefficient = 1.0
+- Importancia de los genes disjuntos en el cálculo de la distancia genética.
+
+compatibility_weight_coefficient = 0.5
+- Importancia de las diferencias de peso en los genes en el cálculo de la distancia genética.
+
+node_activation_options = sigmoid tanh
+- El conjunto de posibles funciones de activación para los nodos.
+
+num_hidden = 0
+- El número de nodos ocultos para empezar.
+
+num_inputs = 22
+- Número de nodos de entrada.
+
+num_outputs = 2
+- Número de nodos de salida.
+
+initial_connection = full
+- Cómo se forman las conexiones de red iniciales.
+
+conn_add_prob = 0.2
+- Probabilidad de añadir una nueva conexión durante la mutación.
+
+conn_delete_prob = 0.2
+- Probabilidad de eliminar una conexión durante la mutación.
+
+node_add_prob = 0.3
+- Probabilidad de añadir un nuevo nodo durante la mutación.
+
+node_delete_prob = 0.3
+- Probabilidad de eliminar un nodo durante la mutación.
+
+bias_init_mean = 0.0
+- Media de la distribución gaussiana utilizada para inicializar los sesgos.
+
+bias_init_stdev = 1.0
+- Desviación estándar de la distribución gaussiana utilizada para inicializar los sesgos.
+
+bias_max_value = 30.0
+- Valor máximo para los sesgos de los nodos.
+
+bias_min_value = -30.0
+- Valor mínimo para los sesgos de los nodos.
+
+bias_mutate_power = 0.5
+- Fuerza de la mutación del sesgo.
+
+bias_mutate_rate = 0.8
+- Probabilidad de mutar el sesgo de un nodo.
+
+bias_replace_rate = 0.2
+- Probabilidad de reemplazar el sesgo de un nodo.
+
+weight_init_mean = 0.0
+- Media de la distribución gaussiana utilizada para inicializar los pesos.
+
+weight_init_stdev = 1.0
+- Desviación estándar de la distribución gaussiana utilizada para inicializar los pesos.
+
+weight_max_value = 30
+- Valor máximo para los pesos de las conexiones.
+
+weight_min_value = -30
+- Valor mínimo para los pesos de las conexiones.
+
+weight_mutate_power = 0.8
+- Fuerza de la mutación del peso.
+
+weight_mutate_rate = 0.9
+- Probabilidad de mutar el peso de una conexión.
+
+weight_replace_rate = 0.2
+- Probabilidad de reemplazar el peso de una conexión.
+
+enabled_default = True
+- Estado predeterminado de si un gen de conexión está habilitado.
+
+enabled_mutate_rate = 0.02
+- Probabilidad de cambiar el estado habilitado de un gen de conexión.
+
+[DefaultReproduction]
+elitism = 2
+- Número de los mejores individuos que están garantizados para sobrevivir a la próxima generación.
+
+survival_threshold = 0.3
+- Proporción de especies permitidas para reproducirse cada generación.
+
+[DefaultSpeciesSet]
+compatibility_threshold = 3.0
+- Umbral de distancia genética bajo el cual los genomas se consideran de la misma especie.
+
+[DefaultStagnation]
+species_fitness_func = max
+- Función utilizada para determinar la aptitud de una especie.
+
+max_stagnation = 15
+- Número de generaciones que una especie puede pasar sin mejora antes de que se considere estancada.
+
+[DefaultMutation]
+mutate_rate = 0.8
+- Tasa de mutación general para el genoma.
+
+mutate_weight_shift = 0.8
+- Probabilidad de perturbar uniformemente los pesos de las conexiones.
+
+mutate_add_node = 0.3
+- Probabilidad de añadir un nuevo nodo al genoma.
+
+mutate_add_connection = 0.4
+- Probabilidad de añadir una nueva conexión entre nodos existentes.
+
+mutate_delete_connection = 0.3
+- Probabilidad de eliminar una conexión.
+
+mutate_delete_node = 0.3
+- Probabilidad de eliminar un nodo.
